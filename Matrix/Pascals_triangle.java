@@ -29,6 +29,6 @@ public class Pascals_triangle {
                 System.out.print(ans.get(i).get(j) + " ");
             }
             System.out.println();
-        }
+        }        
     }
 }
