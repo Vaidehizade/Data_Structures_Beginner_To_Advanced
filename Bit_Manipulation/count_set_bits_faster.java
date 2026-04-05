@@ -6,6 +6,7 @@ public class count_set_bits_faster {
     int n = 111;
     while(n > 0){
         //removes the last set bit from current number
+        //the number of itertion = no of set bits
         n = n & (n-1);
         cnt ++;
     }
