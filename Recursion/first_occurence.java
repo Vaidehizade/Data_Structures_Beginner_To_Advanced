@@ -41,12 +41,10 @@ public class first_occurence {
         return -1;
     }
     public static void main(String[] args) {
+
         ArrayList<Integer> ls1 = new ArrayList<>(Arrays.asList(1, 7, 3, 22, 11));
         int key = 11;
         int ans = firstOccurence(ls1,key);
         System.out.println(ans);
     }
-
-
-
 }

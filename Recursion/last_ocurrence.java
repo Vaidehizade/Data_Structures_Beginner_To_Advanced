@@ -8,12 +8,10 @@ public class last_ocurrence {
 
 
    public static int lastOccurence(ArrayList<Integer> ls1, int key){
-
            if(ls1.size() == 0){
             return -1;
            }
            int subIndex =  lastOccurence(new ArrayList<>(ls1.subList(1, ls1.size())), key);
-
            if(subIndex != -1){
             return subIndex+1;
            }
