@@ -21,6 +21,6 @@ public class Bubble_sort_2 {
     }
     public static void main(String[] args) {
         int[] arr = new int[5];
-        bubble_sort_rec(arr,5);
+        bubble_sort_rec(arr,5,0);
     }
 }
