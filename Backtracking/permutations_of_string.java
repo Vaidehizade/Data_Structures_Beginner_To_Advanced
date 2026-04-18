@@ -9,7 +9,7 @@ public class permutations_of_string {
         }
         //recursive case
          // recursive case: swap current position with all positions from i onwards
-        for(int j=i; j< len; i++){
+        for(int j=i; j< len; j++){
             char temp = ans[i];
             ans[i] = ans[j];
             ans[j] = temp;
