@@ -35,21 +35,26 @@ public class linked_list_ops {
         p.next = ptr;
     }
 
-    public static void insert_at_position(Node head, int pos, int data) {
+    public static Node insert_at_position(Node head, int pos, int data) {
+
+        Node ans = new Node(data);
+        // Insert at front
+        if (pos == 1) {
+            ans.next = head;
+            return ans;
+        }
+        //insert at middle or end
         Node q = head;
-        int cnt = 0;
-        while (q != null) {
+        int cnt = 1;
+        while (q != null && cnt < pos - 1) {
             cnt++;
-            if (cnt == pos - 1) {
-                break;
-            }
             q = q.next;
         }
         if (q != null) {
-            Node ans = new Node(data);
             ans.next = q.next;
             q.next = ans;
         }
+        return ans;
     }
 
     public static void display(Node head) {
@@ -60,6 +65,23 @@ public class linked_list_ops {
         }
         System.out.println("null");
     }
+    public static boolean search(Node head, int val){
+        if(head == null) return false;
+        Node p = head;
+        int flag =0;
+        while(p!=null){
+            if(p.data == val){
+                flag=1;
+                break;
+            }
+            p = p.next;
+        }
+        if(flag ==1){
+            return true;
+        }
+        return false;
+    }
+
 
     public static void main(String[] args) {
         Node head = new Node(10);
@@ -67,8 +89,13 @@ public class linked_list_ops {
         head = insert_at_front(head, 30);
         insert_at_end(head, 5);
         insert_at_position(head, 2, 25);
-        
         System.out.println("Linked list:");
         display(head);
+        if(search(head,5)== true){
+            System.out.println("element found!");
+        }
+        else{
+            System.out.println("element not found!");
+        }
     }
 }
