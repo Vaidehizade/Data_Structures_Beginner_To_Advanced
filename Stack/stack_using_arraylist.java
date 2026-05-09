@@ -2,7 +2,7 @@ package Stack;
 
 import java.util.ArrayList;
 
-public class stack_using_vector {
+public class stack_using_arraylist {
 
     static class Stack1<T> {
         private ArrayList<T> arr = new ArrayList<>();
