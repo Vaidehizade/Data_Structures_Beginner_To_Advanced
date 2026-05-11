@@ -3,6 +3,7 @@ package Stack;
 import java.util.Stack;
 
 public class reverse_stack {
+    // stack reversal using recursion
     static void reverse(Stack<Integer> st){
         if(st.isEmpty()){
             return;

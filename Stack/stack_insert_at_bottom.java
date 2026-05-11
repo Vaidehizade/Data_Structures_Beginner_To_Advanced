@@ -16,7 +16,7 @@ public class stack_insert_at_bottom {
     public static void main(String[] args) {
         Stack<Integer> st = new Stack<>();
         int val = 5;
-        st.push(10);
+        st.push(55);
         st.push(20);
         insertAtBottom(st,val);
         while(!st.empty()){
